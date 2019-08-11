@@ -1,0 +1,119 @@
+@import 'Body.scss';
+.box15{
+    @extend .box14;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 10px 40px;
+    margin-bottom: 60px;
+    
+    div{
+        margin: 20px 0px 20px -6px;
+
+        img{
+            height: 30px;
+            margin: 20px 10px -34px 10px;
+        }
+    }
+}
+.box16{
+    @extend .box13;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: url('../assets/Placeholdermg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:5vw;
+    margin-bottom: 60px;
+}
+.box17{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    background-color: #FAFAFA;
+    .flex{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 40px 45px;
+        margin-bottom: 40px;
+
+        div{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 35vw;
+            justify-content: center;
+            align-self: center;
+        }
+    }
+    .icons{
+      margin-top: -40px;
+      align-content: center;
+
+      img{
+        height: 25px;
+      }
+    }
+}
+.box18{
+  @extend .box17;
+  grid-row: 3;
+  background-color: #515151;
+  height: 35vh;
+  padding: 50px 45px 0px 45px;
+
+  hr{
+    border: 1px solid #807e7e;
+  }
+
+  nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    ul{
+      margin:0;
+      padding: 0;
+      list-style-type: none;
+
+      li{
+        display: inline;
+        margin: auto 4px;
+        color: #FFFFFF;
+      }
+    }
+    button{
+      @include button(1px solid #e09a58,#e09a58,white,2px);
+    }
+  }
+  div{
+    display: flex;
+    justify-content: space-between;
+    ul{
+      margin:0;
+      padding: 0;
+      list-style-type: none;
+
+      li{
+        display: inline;
+        margin: auto 6px;
+        color: #807e7e;
+      }
+    }
+    div{
+        img{
+        height: 6px;
+        margin: 4px;
+        color: #807e7e;
+      }
+    }
+  }
+}
+.txt-lgr{
+    @extend .txt-lg;
+    font-size: 17px;
+}
+.txt-bld{
+  font-weight: bold;
+}
+.txt-grey{
+  color: #515151;
+}

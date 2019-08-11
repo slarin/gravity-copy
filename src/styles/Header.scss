@@ -1,0 +1,108 @@
+@mixin grider($col,$rows) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-auto-rows: $rows;
+}
+@mixin boxer($gdcol, $gdrow){
+    display: grid;
+    grid-column: $gdcol;
+    grid-row: $gdrow;
+}
+@mixin button($border,$bkclr,$clr,$bdrd){
+    border: $border;
+    background-color: $bkclr;
+    color: $clr;
+    border-radius: $bdrd;
+}
+
+.nav-bar{
+    @include grider(2fr 1fr 2fr, 30px);
+    margin: auto -160px auto 30px;
+    padding: 5px 0px;
+}
+.hdr-cont{
+    @include grider(3fr 3fr, 88vh);
+    margin-top: 15px;
+}
+.box1{
+    display: grid;
+    grid-column: 1/2;
+    grid-auto-rows: auto;
+    @include grider(1fr, '');
+    grid-auto-rows: minmax(30vh, auto);
+
+    div{
+        padding: 10px 70px;
+        margin: 2px;
+           
+        .hdr-txt-lg{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            
+            .hdr-txt-sm{
+                font-size: 5px;
+                font-weight: lighter;
+            }
+        }
+        button{
+            @include button(2px solid blue,blue , white , 2px);
+            width: 120px; 
+            height: 25px;
+
+            
+        }
+        button:hover{
+            background-color: blueviolet;
+        }
+    }
+}
+.box2{
+    display: grid;
+    grid-column: 2/3;
+    background-image: url("../assets/hdrPlaceholder.png");
+    background-size: cover;
+}
+.box3{
+    background-image: url("../assets/Placeholdervideo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:42vw;
+    height:35vh;
+    position: absolute;
+    z-index: 1;
+    top: 45vh;
+    left: 45vw;
+}
+
+/*@media(max-width: 760px){
+    .nav-bar{
+        display: flex;
+        flex-flow: row nowrap;
+        img{
+            height: 12px;
+            width: 35px;
+            margin-left: 30px;
+        }
+    }
+    .hdr-cont{
+        display: flex;
+        margin: auto;
+        flex-flow: column nowrap;
+    }
+    .box1{
+        display: flex;
+        flex-flow: column nowrap;
+        div{
+            margin: none;
+            padding: none;
+            .hdr-txt-lg{
+                font-size:15px;
+                .hdr-txt-sm{
+                    font-size:4px;
+                }
+            }
+            
+        }
+    }
+}*/

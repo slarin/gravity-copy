@@ -1,0 +1,116 @@
+.nav-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-rows: 30px;
+  margin: auto -160px auto 30px;
+  padding: 5px 0px;
+}
+
+.hdr-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 3fr;
+      grid-template-columns: 3fr 3fr;
+  grid-auto-rows: 88vh;
+  margin-top: 15px;
+}
+
+.box1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-auto-rows: auto;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: "";
+  grid-auto-rows: minmax(30vh, auto);
+}
+
+.box1 div {
+  padding: 10px 70px;
+  margin: 2px;
+}
+
+.box1 div .hdr-txt-lg {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.box1 div .hdr-txt-lg .hdr-txt-sm {
+  font-size: 5px;
+  font-weight: lighter;
+}
+
+.box1 div button {
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+  border-radius: 2px;
+  width: 120px;
+  height: 25px;
+}
+
+.box1 div button:hover {
+  background-color: blueviolet;
+}
+
+.box2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-image: url("../assets/hdrPlaceholder.png");
+  background-size: cover;
+}
+
+.box3 {
+  background-image: url("../assets/Placeholdervideo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 42vw;
+  height: 35vh;
+  position: absolute;
+  z-index: 1;
+  top: 45vh;
+  left: 45vw;
+}
+
+/*@media(max-width: 760px){
+    .nav-bar{
+        display: flex;
+        flex-flow: row nowrap;
+        img{
+            height: 12px;
+            width: 35px;
+            margin-left: 30px;
+        }
+    }
+    .hdr-cont{
+        display: flex;
+        margin: auto;
+        flex-flow: column nowrap;
+    }
+    .box1{
+        display: flex;
+        flex-flow: column nowrap;
+        div{
+            margin: none;
+            padding: none;
+            .hdr-txt-lg{
+                font-size:15px;
+                .hdr-txt-sm{
+                    font-size:4px;
+                }
+            }
+            
+        }
+    }
+}*/
+/*# sourceMappingURL=Header.css.map */
