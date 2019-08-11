@@ -1,5 +1,8 @@
 # gravity
 
+## Note
+The dependencies of this app are in the package.json file. It shows all the node modules I used.
+
 ## Project setup
 ```
 npm install
