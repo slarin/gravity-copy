@@ -1,6 +1,6 @@
 # gravity
 
-Built off with vue.js
+Built with vue.js
 
 ## View Live: http://thirsty-band.surge.sh/
 
