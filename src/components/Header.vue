@@ -2,9 +2,28 @@
     <div class="header">
         <nav class="nav-bar">
             <img src="../assets/Logo2.png" class="img1"/>
-            <img src="../assets/Search Icon.png" class="img1"/>
-            <img src="../assets/Menu Icon.png" class="img1"/>
+            
+            <div class="searchBox">
+            <input class="searchInput" :class="{active: isActive}" type="text" name="" placeholder="Search" @click="holder">
+            <button class="searchButton" href="#">
+            </button>
+            </div>
+            
+            <div class="menu" @click="dropper()">
+              <span class="one"></span>
+              <span class="two"></span>
+              <span class="three"></span>
+            </div>
         </nav>
+
+        <div class="menu-items" :class="{dropper: isDropped}">
+          <ul>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Products</li>
+          </ul>
+        </div>
+
         <div class="hdr-cont">
             <div class="box1">
                 <div>
@@ -33,6 +52,22 @@
 import '../styles/Header.css'
 
 export default {
-  name: 'Header'
+  name: 'Header',
+
+  data() {
+    return {
+      isActive: false,
+      isDropped: true
+    }
+  },
+
+  methods: {
+    holder() {
+      this.isActive = !this.isActive
+    },
+    dropper() {
+      this.isDropped = !this.isDropped
+    }
+  }
 }
 </script>

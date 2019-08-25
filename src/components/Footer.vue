@@ -45,7 +45,7 @@
               <li class="txt-sm">About Us</li>
               <li class="txt-sm">Contact Us</li>
             </ul>
-            <input type="text" placeholder="Your message here"/>
+            <input type="text" placeholder="Your message here" @click="modal">
             <button>SEND</button>
           </nav>
           <br>
@@ -65,6 +65,23 @@
             </div>
           </div>
         </div>
+        <div class="modal" :class="{modaler: isModal}">
+			    <span class="close" @click="modal(); reset();">&times;</span>
+          <div class="modal-div">
+          <div class="modal-content" :class="{curtain: drapes}">
+          <h4>Send Us a message. We'd love to hear from you!</h4>
+          <label for="name">Name</label><input type="text" required v-model="name">
+          <label for="msg">Message</label><textarea cols="10" required></textarea>
+          <button @click="exit" :disabled="disabler">Send Message</button>
+          </div>
+          <div class="exit" :class="{exiter: isExit}">
+            <h3>Thank you, {{ name }}</h3>
+            <p>We've recieved your message and will get back to you as soon
+              as possible.
+            </p>
+          </div>
+          </div>
+        </div>
     </div>
 </template>
 
@@ -75,8 +92,42 @@ import '../styles/Footer.scss'
 export default {
     name: 'Footer',
 
-components: {
-    Profile
+    data(){
+      return {
+        isModal: false,
+        name: "",
+        isExit: false,
+        drapes: false
+      }
+    },
+
+    methods: {
+      modal(){
+        this.isModal = !this.isModal
+        this.drapes = false
+      },
+      exit(){
+        this.isExit = !this.isExit
+        this.drapes = true
+      },
+      reset(){
+        this.isExit = false
+        this.name = ""
+      }
+    },
+
+    computed: {
+      disabler(){
+        if(this.name !== ""){
+          return false
+        }else{
+          return true
+        }
+      }
+    },
+
+    components: {
+      Profile
     }
 
 }

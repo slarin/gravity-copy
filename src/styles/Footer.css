@@ -5,6 +5,7 @@
       grid-template-columns: 1fr 3fr 4fr;
   grid-auto-rows: minmax(50vh, auto);
   margin-top: 100px;
+  grid-auto-rows: minmax(30vh, auto);
   /*div:nth-child(odd){
         background-color: gray;
     }*/
@@ -12,8 +13,8 @@
 
 .box4 {
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -86,6 +87,34 @@
 .hooper-slide.is-current {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media (max-width: 770px) {
+  .box4 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 425px) {
+  .box4 {
+    grid-column: 1 / -1 !important;
+    -ms-grid-row: 1 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row: 1 / 2 !important;
+  }
+  .box5 {
+    grid-column: 1 / -1 !important;
+    -ms-grid-row: 2 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row: 2 / 3 !important;
+    background-color: red !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .bdy-cont {
+    margin-top: 250px !important;
+  }
 }
 
 .box15 {
@@ -210,6 +239,10 @@
   color: #FFFFFF;
 }
 
+.box18 nav input {
+  padding: 5px;
+}
+
 .box18 nav button {
   border: 1px solid #e09a58;
   background-color: #e09a58;
@@ -254,5 +287,141 @@
 
 .txt-grey {
   color: #515151;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.modal-div {
+  margin: 0 auto;
+  width: 80vw !important;
+  height: 68vh;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FAFAFA;
+  border: 1px solid #FAFAFA;
+  border-radius: 5px;
+}
+
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-content h4 {
+  text-align: center;
+}
+
+.modal-content label {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 10vw;
+}
+
+.modal-content input, .modal-content textarea {
+  width: 30vw;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-content > button {
+  color: white;
+  background-color: #f56d12;
+  width: 180px;
+  margin: 10vh 0 0 5vw;
+  border: 1px solid #f56d12;
+  border-radius: 5px;
+}
+
+.modal-content > button:hover {
+  background-color: #ff7b00;
+  border: 1-x solid #ff7b00;
+  cursor: pointer;
+}
+
+.modaler {
+  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.exit {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: auto 80px;
+}
+
+.exiter {
+  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.curtain {
+  display: none !important;
 }
 /*# sourceMappingURL=Footer.css.map */

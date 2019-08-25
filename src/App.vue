@@ -45,9 +45,4 @@ export default {
     transform: rotate(360deg);
   }
 }
-/*@media(max-width: 760px) {
-  #app{
-    margin: auto;
-  }
-}*/
 </style>

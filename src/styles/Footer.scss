@@ -80,6 +80,7 @@
         color: #FFFFFF;
       }
     }
+    input{padding: 5px;}
     button{
       @include button(1px solid #e09a58,#e09a58,white,2px);
     }
@@ -116,4 +117,94 @@
 }
 .txt-grey{
   color: #515151;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-content: center;
+}
+
+.modal-div {
+  margin: 0 auto;
+  width: 80vw !important;
+	height: 68vh;
+	animation-name: zoom;
+  animation-duration: 0.6s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: #FAFAFA;
+  border: 1px solid #FAFAFA;
+  border-radius: 5px;
+}
+.modal-content{
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  h4{text-align: center;}
+  label{
+    align-self: flex-end;
+    margin-right: 10vw;
+  }
+  input, textarea{
+    width: 30vw;
+    align-self: flex-end;
+    margin-right: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }   
+}
+.modal-content>button{
+  color: white;
+  background-color: #f56d12;
+  width: 180px;
+  margin: 10vh 0 0 5vw;
+  border: 1px solid #f56d12;
+  border-radius: 5px;
+}
+.modal-content>button:hover{
+    background-color: #ff7b00;
+    border: 1-x solid #ff7b00;
+    cursor: pointer;
+  }
+.modaler {
+  display: block !important;
+  display: flex !important;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.exit{
+  display: none;
+  justify-content: center;
+  flex-flow: column nowrap;
+  margin: auto 80px;
+}
+.exiter{
+  display: block !important;
+  display: flex !important;
+}
+.curtain{
+  display: none !important;
 }

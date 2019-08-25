@@ -16,12 +16,111 @@
 }
 
 .nav-bar{
-    @include grider(2fr 1fr 2fr, 30px);
-    margin: auto -160px auto 30px;
-    padding: 5px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 20px;    
+}
+.menu span{
+    display: block;
+    height: 3px;
+    margin: 5px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    display: block;
+    cursor: pointer;
+}
+.menu :hover{
+    width: 25px;
+    background-color: aqua;
+}
+.one{
+    width: 35px;
+}
+.two{
+    width: 20px;
+}
+.three{
+    width: 35px;
+}
+.searchInput {
+    border:none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 12px;
+    transition: 0.4s;
+    width: 0px;
+
+}
+.active {
+    width: 150px;
+    padding: 8px 30px;
+}
+.searchBox {
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0px;
+    margin-top: -30px;
+
+}
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 8px 30px;
+}
+.searchBox:hover > .searchButton {
+    background: white;
+    color : #2f3640;
+    border-color: white;
+  }
+.searchButton {
+    color: white;
+    float: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #2f3640;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+.menu-items{
+    position: static;
+    height: auto;
+    margin-top: 0px;
+    width: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 600ms ease-in;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.menu-items>ul{list-style: none;}
+.menu-items>ul>li{
+    margin: 5px;
+    text-align: end;
+    font-weight: bolder;
+    display: block;
+    cursor: pointer;
+    
+}
+.menu-items li:hover{color: aqua;}
+.menu-items.dropper{
+    position: fixed !important;
+    margin-top: -200px;
+    width: inherit;
 }
 .hdr-cont{
-    @include grider(3fr 3fr, 88vh);
+    @include grider(3fr 3fr, minmax(1fr, 88vh));
     margin-top: 15px;
 }
 .box1{
@@ -37,7 +136,7 @@
            
         .hdr-txt-lg{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: bold;
             
             .hdr-txt-sm{
@@ -75,34 +174,12 @@
     left: 45vw;
 }
 
-/*@media(max-width: 760px){
-    .nav-bar{
-        display: flex;
-        flex-flow: row nowrap;
-        img{
-            height: 12px;
-            width: 35px;
-            margin-left: 30px;
-        }
+@media (max-width: 768px) {
+    .searchBox:hover > .searchInput {
+        width: 100px;
+        padding: 0 6px;
     }
-    .hdr-cont{
-        display: flex;
-        margin: auto;
-        flex-flow: column nowrap;
+    .box1>div>.hdr-txt-lg{
+        font-size: 10px;
     }
-    .box1{
-        display: flex;
-        flex-flow: column nowrap;
-        div{
-            margin: none;
-            padding: none;
-            .hdr-txt-lg{
-                font-size:15px;
-                .hdr-txt-sm{
-                    font-size:4px;
-                }
-            }
-            
-        }
-    }
-}*/
+}
