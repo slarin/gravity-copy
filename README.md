@@ -2,7 +2,7 @@
 
 Built with vue.js
 
-## View Live: http://thirsty-band.surge.sh/
+## View Live: http://possible-shoes.surge.sh/
 
 ## Mock up it is based-off: https://dribbble.com/shots/5316548-Freebie-Gravity-Agency-Portfolio-Template
 
