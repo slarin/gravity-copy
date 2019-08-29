@@ -33,7 +33,7 @@ export default {
     }
     .p-div > div{
         display: flex;
-        margin-left: 35px;
+        margin-left: 3vw;
         flex-flow: column nowrap;
         align-items: flex-start;
         line-height: 0;
@@ -49,4 +49,21 @@ export default {
         text-align: left;
     }
 
+    @media(max-width: 600px){
+        .p-div>img{
+            height: 8vh;
+            width: 8vw;
+            margin: 0px;
+        }
+        .bg-txt{font-size: 11px;}
+        .sm-txt{font-size: 8px;}
+    }
+    @media (max-width: 380px) {
+        .bg-txt{font-size: 8px;}
+        .sm-txt{font-size: 5px;}
+    }
+     @media (max-width: 330px) {
+        .bg-txt{font-size: 5px;}
+        .sm-txt{font-size: 3px;}
+    }
 </style>

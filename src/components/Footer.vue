@@ -22,7 +22,6 @@
             <div class="flex">
                 <p class="txt-lg txt-bld">Our clients</p>
                 <div>
-                    <p class="txt-sm txt-bld">We worked with</p>
                     <p class="txt-sm txt-grey">Our favorite brands are our friends! We help them to achieve their goals,
                          they help us to stay sharp.</p>
                 </div>
@@ -112,13 +111,13 @@ export default {
       },
       reset(){
         this.isExit = false
-        this.name = ""
+        this.name = ''
       }
     },
 
     computed: {
       disabler(){
-        if(this.name !== ""){
+        if(this.name !== ''){
           return false
         }else{
           return true

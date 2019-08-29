@@ -16,9 +16,6 @@
                     The best time to view the moon, obviously, is at 
                     night when there are few clouds and the weather is 
                     accommodating for a long and lasting study.<br><br>
-                    For most of us, the idea of astronomy is something 
-                    we directly connect to “stargazing”,
-                     telescopes and seeing magnificent displays in the heavens.
                 </p>
                 <Profile 
                     :src= "Ellipse"
@@ -32,8 +29,7 @@
            <div class="box9">
                <!--<hr><p class="txt-sm">SERVICES</p>-->
                <p class="txt-lg">
-                   We love to work hard and explore new things
-                    that’s why we cover lot of things. 
+                   We love to work hard and explore new things.<br> 
                    Check our service list and view details.
                </p>
                <p class="txt-sm">
@@ -43,10 +39,10 @@
            <div class="box10">
                <hooper :itemsToShow="1.5" :centerMode="true">
                     <slide>
-                        <img src="../assets/Placeholdersld1.png"/>
+                        <img src="../assets/Placeholdersld1.jpg"/>
                     </slide>
                     <slide>
-                        <img src="../assets/Placeholdersld2.png"/>
+                        <img src="../assets/Placeholdersld2.jpg"/>
                     </slide>
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
                 </hooper>
@@ -59,17 +55,17 @@
                     Well thought out and super easy to use.
                 </p>
                 <p class="txt-sm">
-                    As we approached the palace I could see through the great windows of the
-                     first floor the brilliantly illuminated audience chamber of Than Kosis.
-                    The immense hall was crowded with nobles and their women.
+                   Tenets of this new age are<br><br>
+                   <span>Simplicity</span> and <span>Minimalism</span><br><br>
+                    Why do in twelve moves what you can do in <span>four</span>?
                 </p>
                 <Profile 
                     :src="hunedicon"
-                    position="ULTIMATE RESULT"
+                    position="Ultimate Result"
                 />
                 <Profile 
                     :src="Bagicon"
-                    position="MINIMAL DESIGN"
+                    position="Minimal Design"
                 />
             </div>
        </div>
@@ -81,7 +77,7 @@ import Profile from './Profile'
 import '../styles/Body.css'
 import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper';
 import 'hooper/dist/hooper.css';
-import Ellipse from '../assets/Ellipse.png'
+import Ellipse from '../assets/Ellipse.jpg'
 import Bagicon from '../assets/Bagicon.png'
 import hunedicon from '../assets/hunedicon.png'
 
@@ -91,8 +87,8 @@ export default {
     components: {
         Profile,
         Hooper,
-        Slide,
-        HooperNavigation
+        HooperNavigation,
+        Slide
     },
 
     data(){

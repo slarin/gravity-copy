@@ -8,7 +8,7 @@
             <button class="searchButton" href="#">
             </button>
             </div>
-            
+
             <div class="menu" @click="dropper()">
               <span class="one"></span>
               <span class="two"></span>
@@ -17,24 +17,27 @@
         </nav>
 
         <div class="menu-items" :class="{dropper: isDropped}">
-          <ul>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Products</li>
-          </ul>
+            <ul>
+              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/about">About</router-link></li>
+            </ul>
         </div>
 
         <div class="hdr-cont">
             <div class="box1">
                 <div>
                     <p class="hdr-txt-lg">
-                        Work around you and your team
+                        The 21st Century has a language - <br>
+                        does your business speak it?
                     </p>
                     <p>
                         from ads that dance or sing
                         to MTV-like commercials, online advertisers
                         are now using a new type of technology: "rich media"
-                        to attract new customers.
+                        to attract new customers.<br><br>
+                        vibrant colors, sharp contrast, stop-motion<br><br>
+                        <span class="hdr-txt-sm">"normal" is so last century<br>
+                        has your business kept up?</span>
                     </p>
                     <button>Get Started</button>
                 </div>
@@ -54,7 +57,7 @@ import '../styles/Header.css'
 export default {
   name: 'Header',
 
-  data() {
+  data () {
     return {
       isActive: false,
       isDropped: true
@@ -62,10 +65,10 @@ export default {
   },
 
   methods: {
-    holder() {
+    holder () {
       this.isActive = !this.isActive
     },
-    dropper() {
+    dropper () {
       this.isDropped = !this.isDropped
     }
   }
