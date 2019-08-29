@@ -208,3 +208,42 @@
 .curtain{
   display: none !important;
 }
+
+@media(max-width: 500px){
+  .box18{
+    padding: 10px;
+    nav{
+      img{
+        height: 10px;
+      }
+      input{
+        height: 5px;
+        width: 100px;
+        font-size: 10px;
+      }
+    }
+  }
+  .txt-lgr{
+    font-size: 12px;
+  }
+}
+@media(max-width: 400px){
+  .box15{
+    padding: 10px;
+  }
+}
+@media(max-width: 330px){
+  nav{
+    input{
+      height: 5px;
+      width: 40px;
+      font-size: 4px;
+    }
+    button{
+      width: 30px;
+      height: 19px;
+      font-size: 8px;
+      padding: 2px;
+    }
+  }
+}

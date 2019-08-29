@@ -27,7 +27,7 @@
     display: block;
     height: 3px;
     margin: 5px 0px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     background-color: black;
     display: block;
@@ -96,31 +96,37 @@
 .menu-items{
     position: static;
     height: auto;
-    margin-top: 0px;
     width: auto;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-content: center;
+    margin: 0px 20px;
     transition: all 600ms ease-in;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
-.menu-items>ul{list-style: none;}
+.menu-items>ul{
+    margin-left: -37px;
+    list-style: none;
+}
 .menu-items>ul>li{
-    margin: 5px;
-    text-align: end;
+    margin: 10px auto;
     font-weight: bolder;
-    display: block;
     cursor: pointer;
-    
+    a{
+        color: #2f3640;
+        text-decoration: none;
+        
+    }
 }
-.menu-items li:hover{color: aqua;}
+.menu-items a:hover{color: aqua;}
 .menu-items.dropper{
     position: fixed !important;
+    display: flex;
     margin-top: -200px;
     width: inherit;
 }
 .hdr-cont{
-    @include grider(3fr 3fr, minmax(1fr, 88vh));
+    @include grider(3fr 3fr, minmax(1fr, 50vh));
     margin-top: 15px;
 }
 .box1{
@@ -128,7 +134,7 @@
     grid-column: 1/2;
     grid-auto-rows: auto;
     @include grider(1fr, '');
-    grid-auto-rows: minmax(30vh, auto);
+    grid-auto-rows: minmax(10vh, 50vh);
 
     div{
         padding: 10px 70px;
@@ -138,11 +144,11 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 25px;
             font-weight: bold;
-            
-            .hdr-txt-sm{
-                font-size: 5px;
-                font-weight: lighter;
-            }
+        }
+        .hdr-txt-sm{
+            font-size: 15px;
+            color: #697079;
+            font-weight: lighter;
         }
         button{
             @include button(2px solid blue,blue , white , 2px);
@@ -153,13 +159,14 @@
         }
         button:hover{
             background-color: blueviolet;
+            cursor: pointer;
         }
     }
 }
 .box2{
     display: grid;
     grid-column: 2/3;
-    background-image: url("../assets/hdrPlaceholder.png");
+    background-image: url("../assets/hdrPlaceholder.jpg");
     background-size: cover;
 }
 .box3{
@@ -179,7 +186,23 @@
         width: 100px;
         padding: 0 6px;
     }
+    .box1{
+        div{
+            margin: auto 25px;
+            padding: 0px;
+        }
+    }
     .box1>div>.hdr-txt-lg{
-        font-size: 10px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 380px) {
+    .searchBox:hover > .searchInput {
+        width: 60px;
+        padding: 15px;
+    }
+    .box3{
+        top: 50vh;
+        left: 48vw;
     }
 }
