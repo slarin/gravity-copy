@@ -1,27 +1,8 @@
 <template>
   <div id="app">
-    <Header />
-    <Body />
-    <Footer />
+    <router-view />
   </div>
 </template>
-
-<script>
-import Header from './components/Header'
-import Body from './components/Body'
-import Profile from './components/Profile'
-import Footer from './components/Footer'
-
-export default {
-  name: 'app',
-  components: {
-    Header,
-    Body,
-    Profile,
-    Footer
-  }
-}
-</script>
 
 <style lang="scss">
 #app {
@@ -29,20 +10,19 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background-color: #f4f4f4;
-  margin-top: 10px;
-  margin: auto 10vw;
+  margin: auto 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.3);
 }
-.v-logo{
-  animation: roll infinite 20s linear;
-  height: 5vh;
-}
-@keyframes roll {
-  from{
-    transform: rotate(0deg);
+@media (min-width: 1040px){
+  #app{
+    margin: auto 10vw;
   }
-  to{
-    transform: rotate(360deg);
+}
+@media (max-width: 770px){
+  #app{
+    margin: 1vw !important;
   }
 }
 </style>
