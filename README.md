@@ -1,4 +1,10 @@
-# gravity
+## gravity
+
+Built with Vue.js
+
+## View Live: http://helpless-spring.surge.sh
+
+## Mock up it is based-off: https://dribbble.com/shots/5316548-Freebie-Gravity-Agency-Portfolio-Template
 
 ## Project setup
 ```
